@@ -1,0 +1,120 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:dist="http://schemas.android.com/apk/distribution"
+4    package="org.tensorflow.lite.examples.objectdetection"
+5    android:versionCode="1"
+6    android:versionName="1.0.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="21"
+9-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="32" />
+10-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml
+11
+12    <dist:module dist:instant="true" />
+12-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:9:5-40
+12-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:9:18-37
+13
+14    <!-- permissions camera et hardware -->
+15    <uses-feature android:name="android.hardware.camera" />
+15-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:12:5-60
+15-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:12:19-57
+16
+17    <uses-permission android:name="android.permission.CAMERA" />
+17-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:13:5-65
+17-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:13:22-62
+18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+19    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+20    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+21
+22    <application
+22-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:15:5-42:19
+23        android:allowBackup="true"
+23-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:19:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.6.0] C:\Users\Dell\.gradle\caches\transforms-3\5a87cf4110f68e1cf82394b1fba8462d\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:label="@string/app_name"
+26-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:18:9-41
+27        android:taskAffinity=""
+27-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:20:9-32
+28        android:testOnly="true" >
+29        <activity
+29-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:23:9-40:20
+30            android:name="org.tensorflow.lite.examples.objectdetection.MainActivity"
+30-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:24:13-41
+31            android:clearTaskOnLaunch="true"
+31-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:25:13-45
+32            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
+32-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:30:13-91
+33            android:exported="true"
+33-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:27:13-36
+34            android:resizeableActivity="true"
+34-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:29:13-46
+35            android:rotationAnimation="seamless"
+35-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:28:13-49
+36            android:theme="@style/AppTheme" >
+36-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:26:13-44
+37
+38            <!-- action pour Main -->
+39            <intent-filter>
+39-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:34:13-37:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:35:17-69
+40-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:35:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:36:17-77
+42-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:36:27-74
+43            </intent-filter>
+44
+45            <meta-data
+45-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:38:13-83
+46                android:name="android.notch_support"
+46-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:38:24-60
+47                android:value="true" />
+47-->C:\Users\Dell\Desktop\Nouveau dossier (2)\alaa_pcd\Alaa_8_App\app\src\main\AndroidManifest.xml:38:61-81
+48        </activity>
+49
+50        <uses-library
+50-->[androidx.window:window:1.0.0-alpha09] C:\Users\Dell\.gradle\caches\transforms-3\a8de75245e5900cbaae160c8381d134e\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:25:9-27:40
+51            android:name="androidx.window.extensions"
+51-->[androidx.window:window:1.0.0-alpha09] C:\Users\Dell\.gradle\caches\transforms-3\a8de75245e5900cbaae160c8381d134e\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:26:13-54
+52            android:required="false" />
+52-->[androidx.window:window:1.0.0-alpha09] C:\Users\Dell\.gradle\caches\transforms-3\a8de75245e5900cbaae160c8381d134e\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:27:13-37
+53        <uses-library
+53-->[androidx.window:window:1.0.0-alpha09] C:\Users\Dell\.gradle\caches\transforms-3\a8de75245e5900cbaae160c8381d134e\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:28:9-30:40
+54            android:name="androidx.window.sidecar"
+54-->[androidx.window:window:1.0.0-alpha09] C:\Users\Dell\.gradle\caches\transforms-3\a8de75245e5900cbaae160c8381d134e\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:29:13-51
+55            android:required="false" />
+55-->[androidx.window:window:1.0.0-alpha09] C:\Users\Dell\.gradle\caches\transforms-3\a8de75245e5900cbaae160c8381d134e\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:30:13-37
+56
+57        <service
+57-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\Dell\.gradle\caches\transforms-3\780dd7349eefd1b7172c3ad2acc3c36e\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:26:9-35:19
+58            android:name="androidx.camera.core.impl.MetadataHolderService"
+58-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\Dell\.gradle\caches\transforms-3\780dd7349eefd1b7172c3ad2acc3c36e\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:27:13-75
+59            android:enabled="false"
+59-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\Dell\.gradle\caches\transforms-3\780dd7349eefd1b7172c3ad2acc3c36e\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:28:13-36
+60            android:exported="false" >
+60-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\Dell\.gradle\caches\transforms-3\780dd7349eefd1b7172c3ad2acc3c36e\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:29:13-37
+61            <meta-data
+61-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\Dell\.gradle\caches\transforms-3\780dd7349eefd1b7172c3ad2acc3c36e\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:32:13-34:89
+62                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+62-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\Dell\.gradle\caches\transforms-3\780dd7349eefd1b7172c3ad2acc3c36e\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:33:17-103
+63                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+63-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\Dell\.gradle\caches\transforms-3\780dd7349eefd1b7172c3ad2acc3c36e\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:34:17-86
+64        </service>
+65
+66        <provider
+66-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dell\.gradle\caches\transforms-3\6bc45f26fe52c9ef5ffcdd5432f82849\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+67            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+67-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dell\.gradle\caches\transforms-3\6bc45f26fe52c9ef5ffcdd5432f82849\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+68            android:authorities="org.tensorflow.lite.examples.objectdetection.lifecycle-process"
+68-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dell\.gradle\caches\transforms-3\6bc45f26fe52c9ef5ffcdd5432f82849\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+69            android:exported="false"
+69-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dell\.gradle\caches\transforms-3\6bc45f26fe52c9ef5ffcdd5432f82849\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+70            android:multiprocess="true" />
+70-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dell\.gradle\caches\transforms-3\6bc45f26fe52c9ef5ffcdd5432f82849\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+71    </application>
+72
+73</manifest>

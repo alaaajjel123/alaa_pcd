@@ -1,0 +1,172 @@
+
+------Liens utils:
+
+
+------ lien1: 
+
+
+		https://www.tensorflow.org/lite/android/quickstart
+
+
+------ lien2:
+
+
+		https://www.tensorflow.org/lite/examples/object_detection/overview
+
+
+------ lien3:
+
+
+		https://github.com/tensorflow/examples/blob/master/lite/examples/image_classification/android/README.md
+
+
+------ liens modeles et dataset (pretrained)
+
+
+
+		MobileNet_SSD v1:
+
+
+				https://tfhub.dev/tensorflow/lite-model/ssd_mobilenet_v1/1/metadata/2
+
+
+		EfficientDet Lite0:
+
+
+				 https://tfhub.dev/tensorflow/lite-model/efficientdet/lite0/detection/metadata/1
+
+
+		EfficientDet Lite1:
+
+
+				 https://tfhub.dev/tensorflow/lite-model/efficientdet/lite1/detection/metadata/1
+
+		
+		EfficientDet Lite2:
+
+
+				 https://tfhub.dev/tensorflow/lite-model/efficientdet/lite2/detection/metadata/1
+
+
+		model entrainé avec COCO dataset:
+
+
+				 http://cocodataset.org/
+
+
+
+
+
+
+
+Explication du code :
+
+
+
+	class CameraFragment: 
+
+
+		  la classe CameraFragment permet de gérer la caméra d'un dispositif Android et d'analyser les images capturées
+    		  en temps réel à la recherche d'objets spécifiques, en utilisant l'un de nos modèles.
+
+     		  -étend la classe Fragment d'Android
+     		  -implémente également une interface DetectorListener pour traiter les résultats de la détection.
+
+    		  -les fonctions :
+
+        		-les attributs pour la gestion de la caméra et de la détection d'objets.
+        		-ExecutorService pour exécuter des opérations de manière asynchrone
+        		-onResume vérifie les autorisations nécessaires pour utiliser la caméra
+        		-onDestroyView détruit la vue et ferme l'ExecutorService
+        		-onCreeteView crée et renvoie la vue de la caméra
+        		-onViewCreated debute l'utilisation du caméra et configure les contrôles des paramètres de détection
+
+
+
+	class PermissionsFragment: 
+
+		
+		  cette classe (fragment d'app) PermissionsFragment pour gèrer les autorisations de la caméra et afficher
+    		  le fragment du cam
+       	          -ici on verifie l'autorisation autorisation sinon on demande de l'utilisateur d'autoriser
+
+    		  les methodes :
+
+    		        -navigateToCamera: pour afficher le fragment de la cam
+    		        -hasPermissions: pour vérifier si les autorisations sont accordées
+
+
+
+	class MainActivity:
+
+
+		  l'activité principale (implementation ici en fragments)
+         	  - AppCompatActivity pour les fonctionnalités modernes de l'interface utilisateur.
+
+         	  les methodes :
+
+         		-onCraete : charger l'interface utilisateur à partir du fichier activity_main.xml
+         		-inflate: pour inflater la disposition
+         		-setContentView: définir la disposition de l'activité
+         		-onBackPressed: cas particulier
+         		-finishAfterTransition: ferme l'appli (cas de fuite de memoire)
+
+
+
+	class ObjectDetectorHelper:
+
+
+		  cette classe ObjectDetectorHelper implémente un détecteur. ce detecteur utilise l'un de nos modeles
+    		  cette classe pour configurer et initialiser le détecteur
+    		  -le constructeur est a base de parametres: seuil de score et nombre de res maximum
+    		  cette classe utilise le traitement d'image pour prétraiter l'image avant la détection
+
+    		  les methodes:
+        		-detect: pour effectue la detection d'objets pour une image en parametres
+        		cette methode renvoie une liste d'objets détectés, leur score de confiance et le temps d'inférence
+
+    		  la detection peut etre en utilisant le cpu ou gpu
+
+
+	
+	class OverlayView:
+
+		  cette classe OverlayView pour donner une vue personnalisée pour donner les résultats de la détection
+     		  effectuée par l'un de nos modèles(mobilenet , efficientdet ..) en temps réel sur une vidéo en direct
+
+     		  -Les résultats de la détection sont stockés dans une liste d'objets
+     		  -les informations sur les objets : les coordonnées de la boîte englobante et
+     		  -les scores de confiance pour chaque classe d'objet
+
+     		  -la vue de cette classe dessine ensuite les boîtes englobantes et les scores de confiance pour chaque objet
+     		  -pour le dessin on utilise Paint et Rectf
+
+		    
+
+	class TFObjectDetectionTest:
+
+		  pour le test :
+        	  test1 de tensorflow detectionResultsShouldNotChange() : vérifier si les résultats de la détection d'objet ne varie pas tres loin
+        	  des résultats de contrôle.pour les boîtes englobantes et les scores
+
+        	  test2 de tensorflow aussi detectedImageIsScaledWithinModelDimens() : juste pour vérifier si les images détectees ont été mises à l'échelle
+        	  pour s'adapter aux dimensions du modèle du détecteur . juste pour vérifier si les coordonnees des boites englobantes des résultats de detection
+        	  sont inferieures aux dimensions de l'image
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+

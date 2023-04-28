@@ -1,0 +1,26 @@
+
+
+
+----- lien1: presentation Canva : explication du code pour entrainer nos modeles 
+
+
+		https://www.canva.com/design/DAFhbMF0-xw/aT35W1jW22wVj5lV-HV9jw/edit
+
+
+----- lien2: tflite zoo models link
+
+
+		https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
+
+
+
+
+
+
+note: si vous importer le dataset dans l'espace de travail du colab essayer de ne pas fermer la session
+si la session se ferme vous perder le travail que vous avez fait. et vous recommencer des le debut.
+
+il faut s'assurer, dans ce cas, de ne pas quitter la colab que si vous telecharger le modele tflite et son graphe. 
+
+
+		
